@@ -1,0 +1,6 @@
+{
+	"watch": ["src"],
+	"ext": "ts",
+	"exec": "rm -rf lib && tsc",
+	"ignore": ["src/__tests__"]
+}

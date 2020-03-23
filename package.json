@@ -1,0 +1,50 @@
+{
+	"name": "npm-module-starter",
+	"private": true,
+	"version": "1.0.0",
+	"description": "Starting point for a new NPM package.",
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
+	"scripts": {
+		"dev": "ts-node-dev --respawn",
+		"test": "jest --config jestconfig.json",
+		"build": "rm -rf lib && tsc",
+		"watch": "nodemon",
+		"lint": "eslint 'src/**'",
+		"prepare": "npm run build",
+		"prepublishOnly": "npm run lint",
+		"preversion": "npm run lint",
+		"version": "git add -A src",
+		"postversion": "git push && git push --tags"
+	},
+	"keywords": [
+		"npm",
+		"package",
+		"nodejs",
+		"typescript",
+		"andreas casen"
+	],
+	"author": "Andreas Casen",
+	"license": "ISC",
+	"files": [
+		"lib/**/*"
+	],
+	"devDependencies": {
+		"@types/jest": "^25.1.3",
+		"@types/node": "^13.7.4",
+		"@typescript-eslint/eslint-plugin": "^2.20.0",
+		"@typescript-eslint/parser": "^2.20.0",
+		"eslint": "^6.8.0",
+		"eslint-config-standard": "^14.1.0",
+		"eslint-plugin-comments": "^1.0.0",
+		"eslint-plugin-eslint-comments": "^3.1.2",
+		"eslint-plugin-eslint-plugin": "^2.2.1",
+		"eslint-plugin-import": "^2.20.1",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-standard": "^4.0.1",
+		"jest": "^25.1.0",
+		"nodemon": "^2.0.2",
+		"ts-jest": "^25.2.1",
+		"typescript": "^3.8.2"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"transform": {
+	  "^.+\\.(t|j)sx?$": "ts-jest"
+	},
+	"testRegex": "(?!^.+\\.d\\.ts)/__tests__/[/0-9A-Za-z\\._]+(\\.test\\.ts)$",
+	"moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+	"transformIgnorePatterns": [
+		"^.+\\.js$",
+		"^.+\\.d.ts$"
+	],
+	"verbose": true
+}
